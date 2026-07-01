@@ -1,0 +1,38 @@
+.review-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.review-card__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.review-card__author {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.review-card__date {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.review-card__text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+.review-card__actions {
+    display: flex;
+    gap: 0.6rem;
+    padding-top: 0.3rem;
+}
