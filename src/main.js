@@ -17,7 +17,13 @@ connectMongoDB()
 const app = express();
 const PORT = ENVIRONMENT.PORT;
 
-app.use(cors())
+app.use(cors({
+    origin: [
+        'http://localhost:5173',
+        'https://review-app-frontend-pi.vercel.app'
+    ],
+    credentials: true
+}))
 app.use(express.json());
 
 app.use('/api/auth', authRouter);
