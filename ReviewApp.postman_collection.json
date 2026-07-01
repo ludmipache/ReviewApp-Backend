@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "d81242bd-cafd-4118-878e-34e8cf913ef0",
+    "name": "Api items",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55193125"
+  },
+  "item": [
+    {
+      "name": "Crear item",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0cca}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"The Matrix\",\r\n  \"tipo\": \"pelicula\",\r\n  \"descripcion\": \"Un hacker descubre la verdad sobre su realidad\",\r\n  \"anio\": 1999,\r\n  \"autor_o_director\": \"Lana y Lilly Wachowski\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_SLACK_URL}}/api/items",
+          "host": [
+            "{{API_SLACK_URL}}"
+          ],
+          "path": [
+            "api",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear review",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0cca}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fk_item_id\": \"6a3f3b7d902f41439ba98589\",\r\n  \"rating\": 5,\r\n  \"comentario\": \"Una obra maestra del cine\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_SLACK_URL}}/api/reviews",
+          "host": [
+            "{{API_SLACK_URL}}"
+          ],
+          "path": [
+            "api",
+            "reviews"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{API_SLACK_URL}}/api/reviews/item/6a3f3b7d902f41439ba98589",
+          "host": [
+            "{{API_SLACK_URL}}"
+          ],
+          "path": [
+            "api",
+            "reviews",
+            "item",
+            "6a3f3b7d902f41439ba98589"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0cca}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"año\": 2000,\r\n  \"descripcion\": \"Descripcion actualizada de prueba\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_SLACK_URL}}/api/items/6a3f3b7d902f41439ba98589",
+          "host": [
+            "{{API_SLACK_URL}}"
+          ],
+          "path": [
+            "api",
+            "items",
+            "6a3f3b7d902f41439ba98589"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "supabase_service_role_api_key_0cca",
+      "secret": true
+    }
+  ]
+}
