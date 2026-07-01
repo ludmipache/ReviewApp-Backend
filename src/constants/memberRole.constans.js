@@ -1,5 +1,7 @@
-export const MEMBER_WORKSPACE_ROLES = {
-    OWNER: 'dueño',
-    USER: 'usuario',
-    ADMIN: 'admin'
+export const ITEM_TYPES = {
+    MOVIE: 'pelicula',
+    VIDEOGAME: 'videojuego',
+    BOOK: 'libro',
 }
+
+export const ITEM_TYPES_LIST = Object.values(ITEM_TYPES)
