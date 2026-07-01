@@ -20,7 +20,8 @@ const PORT = ENVIRONMENT.PORT;
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        'https://review-app-frontend-pi.vercel.app'
+        'https://review-app-frontend-pi.vercel.app',
+        /\.vercel\.app$/
     ],
     credentials: true
 }))
